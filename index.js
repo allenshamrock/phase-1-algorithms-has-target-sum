@@ -1,15 +1,25 @@
 function hasTargetSum(array, target) {
   // Write your algorithm here
+  for (i = 0; i < array.length; i++) {
+    const secondOperand = target - array[i];
+    for (let j = i + 1; j < array.length; j++) {
+      if (array[j] === secondOperand) return true;
+    }
+  }
+  return false;
 }
 
 /* 
   Write the Big O time complexity of your function here
-*/
 
+*/
+//O(log n)
 /* 
   Add your pseudocode here
 */
-
+//loop through the each elemen
+//loop throught the rest of the elements
+//if elemets of an array sum up to  the target return true
 /*
   Add written explanation of your solution here
 */
